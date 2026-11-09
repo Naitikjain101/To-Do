@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOCTURNE – To-Do</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+
+  <div class="app">
+
+    <div class="topbar">
+      <span id="userName"></span>
+      <button id="logoutBtn">Log out</button>
+    </div>
+
+    <div class="header">
+      <div>
+        <h1 class="greeting" id="greeting"></h1>
+        <div class="date" id="today"></div>
+      </div>
+      <div class="ring">
+        <svg width="84" height="84" viewBox="0 0 84 84">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#ff3d81"/>
+            </linearGradient>
+          </defs>
+          <circle class="track" cx="42" cy="42" r="34"/>
+          <circle class="fill" id="ringFill" cx="42" cy="42" r="34"/>
+        </svg>
+        <div class="percent" id="percent">0%</div>
+      </div>
+    </div>
+
+    <div class="add-box">
+      <input id="taskInput" type="text" placeholder="Add a new task..." autocomplete="off">
+      <div class="prio-picker" id="prioPicker" title="Priority">
+        <button data-p="low"></button>
+        <button data-p="medium" class="active"></button>
+        <button data-p="high"></button>
+      </div>
+      <button id="addBtn" aria-label="Add task">+</button>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="done">Done</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="footer">
+      <span id="counter"></span>
+      <button id="clearBtn">Clear completed</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

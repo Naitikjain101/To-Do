@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOCTURNE – Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+
+  <div class="app login-card">
+    <h1 class="greeting">Welcome<br><span>back.</span></h1>
+    <p class="date" id="subtitle">Log in to see your tasks</p>
+
+    <!-- Tabs: switch between Log in and Sign up -->
+    <div class="filters">
+      <button class="active" data-mode="login">Log in</button>
+      <button data-mode="signup">Sign up</button>
+    </div>
+
+    <form id="authForm">
+      <label for="username">Username</label>
+      <input id="username" type="text" autocomplete="username" placeholder="e.g. alex">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="••••••">
+
+      <p class="error" id="error"></p>
+      <button type="submit" class="primary" id="submitBtn">Log in</button>
+    </form>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
